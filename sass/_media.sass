@@ -1,3 +1,10 @@
+@media (min-width: 481px) and (max-width: 1920px)
+  .navbar
+    &-bottom
+      &__user
+        display: none
+      &__search
+        display: none
 @media (max-width: 1200px)
   .container
     max-width: 960px
@@ -47,3 +54,24 @@
 @media (max-width: 576px)
   .logo
     width: 99px
+@media (min-width: 320px) and (max-width: 480px)
+  .container
+    width: 80%
+  .navbar
+    &-bottom
+      text-align: center
+      padding-top: 31px
+      padding-bottom: 68px
+      &__user
+        flex-direction: column
+        margin-bottom: 27px
+      &__name
+        margin-left: 0
+        margin-top: 10px
+        color: $light
+      &__search
+        margin-bottom: 39px
+    &-menu
+      display: block
+      &__item
+        margin-bottom: 20px
