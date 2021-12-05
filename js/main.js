@@ -15,6 +15,9 @@ $(document).ready(function () {
   },
 });
 
+//parallax effect
+$('.newsletter').parallax({imageSrc: 'img/newsletter-bg.jpeg', speed: 0.4,});
+
 var reviewsSlider = new Swiper('.reviews-slider', {
   // Optional parameters
   loop: true,
