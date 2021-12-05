@@ -40,6 +40,9 @@ var closeModalButton = $(".modal__close");
 modalButton.on('click', openModal);
 closeModalButton.on('click', closeModal);
 
+//to close the modal window when esc is pressed
+$(document).keydown(closeModalEsc);
+
   function openModal(){
     var modalOverlay = $(".modal__overlay");
     var modalDialog = $(".modal__dialog");
@@ -53,5 +56,16 @@ closeModalButton.on('click', closeModal);
     var modalDialog = $(".modal__dialog");
     modalOverlay.removeClass('modal__overlay--visible');
     modalDialog.removeClass('modal__dialog--visible');
+  }
+
+  //to close the modal window by bressing Esc
+  function closeModalEsc(event){
+    event.preventDefault();
+    var modalOverlay = $(".modal__overlay");
+    var modalDialog = $(".modal__dialog");
+    if(event.which === 27){
+      modalOverlay.removeClass('modal__overlay--visible');
+      modalDialog.removeClass('modal__dialog--visible');
+    } 
   }
 });
