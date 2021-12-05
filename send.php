@@ -8,15 +8,24 @@ require 'phpmailer/Exception.php';
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
+$email = $_POST['email'];
 
 // Формирование самого письма
 $title = "Новое обращение Best Tour Plan";
-$body = "
-<h2>Новое обращение</h2>
-<b>Имя:</b> $name<br>
-<b>Телефон:</b> $phone<br><br>
-<b>Сообщение:</b><br>$message
-";
+if(isset($_POST['email'])){
+    $body = "
+        <h2>Новое обращение</h2>
+        <b>Почта:</b><br>$email
+        ";
+}else{
+    $body = "
+        <h2>Новое обращение</h2>
+        <b>Имя:</b> $name<br>
+        <b>Телефон:</b> $phone<br><br>
+        <b>Сообщение:</b><br>$message
+        ";
+}
+
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -30,7 +39,7 @@ try {
     // Настройки вашей почты
     $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
     $mail->Username   = 'zhansauletelisheva@gmail.com'; // Логин на почте
-    $mail->Password   = 'Iphone87754636133'; // Пароль на почте
+    $mail->Password   = 'IphoneIphone87754636133'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
     $mail->setFrom('zhansauletelisheva@gmail.com', 'Zhansaule T'); // Адрес самой почты и имя отправителя
