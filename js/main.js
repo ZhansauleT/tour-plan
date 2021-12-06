@@ -41,7 +41,7 @@ modalButton.on('click', openModal);
 closeModalButton.on('click', closeModal);
 
 //to close the modal window when esc is pressed
-$(document).keydown(closeModalEsc);
+$(".modal__overlay--visible").keydown(closeModalEsc);
 
   function openModal(){
     var modalOverlay = $(".modal__overlay");
@@ -58,7 +58,7 @@ $(document).keydown(closeModalEsc);
     modalDialog.removeClass('modal__dialog--visible');
   }
 
-  //to close the modal window by bressing Esc
+  //to close the modal window by pressing Esc
   function closeModalEsc(event){
     event.preventDefault();
     var modalOverlay = $(".modal__overlay");

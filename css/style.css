@@ -441,11 +441,13 @@ template {
   color: inherit;
   text-decoration: none;
   text-transform: uppercase;
+  font-style: normal;
+  font-weight: bold;
   font-size: 14px;
   line-height: 18px;
 }
 
-.navbar-menu__item--mobile_visible {
+.navbar-menu__item--mobile--visible {
   display: none;
 }
 
@@ -475,6 +477,10 @@ template {
   color: #333333;
 }
 
+.search__input:focus {
+  outline: none;
+}
+
 .search__button {
   position: absolute;
   top: 0;
@@ -483,6 +489,7 @@ template {
   height: 100%;
   border: none;
   background-color: #ec1f46;
+  padding: 0;
 }
 
 .user {
@@ -570,8 +577,11 @@ template {
 }
 
 .hotel-name {
+  font-style: normal;
+  font-weight: bold;
   font-size: 24px;
   line-height: 30px;
+  text-transform: uppercase;
 }
 
 .hotel-wrapper {
@@ -615,6 +625,8 @@ template {
 .hotel-slider {
   width: 728px;
   height: 450px;
+  margin-left: 0;
+  margin-right: 30px;
 }
 
 .hotel-slider__item {
@@ -689,6 +701,7 @@ template {
 }
 
 .rating__text {
+  font-weight: 600;
   font-size: 8px;
   line-height: 10px;
 }
@@ -837,7 +850,7 @@ template {
 .newsletter {
   position: relative;
   padding: 98px 0 87px 0;
-  min-height: 200px;
+  min-height: 260px;
   background: transparent;
 }
 
@@ -878,6 +891,7 @@ template {
 
 .newsletter-title__strong {
   display: block;
+  font-weight: 600;
   font-size: 36px;
   line-height: 45px;
   text-transform: uppercase;
@@ -902,6 +916,10 @@ template {
   font-weight: 300;
   font-size: 14px;
   line-height: 18px;
+}
+
+.subscribe__input:focus {
+  outline: none;
 }
 
 .subscribe__button {
@@ -1290,6 +1308,10 @@ template {
       flex-basis: 48%;
 }
 
+.footer__input:focus {
+  outline: none;
+}
+
 .footer__message {
   width: 539px;
   height: 123px;
@@ -1297,6 +1319,10 @@ template {
       flex-basis: 100%;
   margin-bottom: 23px;
   resize: none;
+}
+
+.footer__message:focus {
+  outline: none;
 }
 
 .footer__info {
@@ -1589,17 +1615,17 @@ template {
   body {
     padding-top: 78px;
   }
-  .navbar--mobile_fixed {
+  .navbar--mobile--fixed {
     position: fixed;
     left: 0;
     top: 0;
     right: 0;
     z-index: 99;
   }
-  .navbar__user--mobile_hidden, .navbar__search--mobile_hidden {
+  .navbar__user--mobile--hidden, .navbar__search--mobile--hidden {
     display: none;
   }
-  .navbar__user--mobile_visible, .navbar__search--mobile_visible {
+  .navbar__user--mobile--visible, .navbar__search--mobile--visible {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1634,7 +1660,7 @@ template {
   .navbar-menu__item {
     margin-bottom: 20px;
   }
-  .navbar-menu__item--mobile_visible {
+  .navbar-menu__item--mobile--visible {
     display: block;
   }
   .menu-button {
