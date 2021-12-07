@@ -21,7 +21,8 @@
     height: 230px
   .footer
     &__input
-      flex-basis: 100%
+      &-group
+        flex-basis: 100%
     &__bottom
       justify-content: space-between
 @media (max-width: 992px)
@@ -75,7 +76,8 @@
       grid-template-columns: repeat (6, 1fr)
       grid-row-gap: 40px
     &__input
-      flex-basis: 49%
+      &-group
+        flex-basis: 49%
     &__logo
       grid-row: 1 / 2
       grid-column: span 2
@@ -237,7 +239,8 @@
       grid-template-columns: repeat (5, 1fr)
       grid-row-gap: 30px
     &__input
-      flex-basis: 49%
+      &-group
+        flex-basis: 49%
     &__logo
       grid-row: 1 / 2
       grid-column: span 2
@@ -327,7 +330,8 @@
         grid-row: 7
         grid-column: 1
     &__input
-      flex-basis: 95%
+      &-group
+        flex-basis: 95%
     &__message
       flex-basis: 95%
     &__info
@@ -351,7 +355,8 @@
 @media (max-width: 541px)
   .footer
     &__input
-      flex-basis: 90%
+      &-group
+        flex-basis: 90%
     &__message
       flex-basis: 90%
     &__info
@@ -370,7 +375,8 @@
       &-details
         width: 280px
     &__input
-      flex-basis: 80%
+      &-group
+        flex-basis: 80%
     &__message
       flex-basis: 80%
     &__info
@@ -415,12 +421,12 @@
           width: fit-content
           flex-wrap: wrap
       &__input
-        width: 100%
-        flex-basis: 100%
+        &-group
+          width: 100%
+          flex-basis: 100%
       &__message
         width: 100%
         flex-basis: 100%
       &__bottom
         &-list
-          margin: auto
           margin-bottom: 10px

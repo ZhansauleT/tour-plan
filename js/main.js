@@ -68,4 +68,32 @@ $(".modal__overlay--visible").keydown(closeModalEsc);
       modalDialog.removeClass('modal__dialog--visible');
     } 
   }
+
+  //Form validation
+  $(".form").each(function() {
+    $(this).validate({
+    messages: {
+      name: {
+        required: "Please specify your name",
+        minlength: "Your name must contain more than 2 characters",
+      },
+      email: {
+        required: "We need your email address to contact you",
+        email: "Your email address must be in the format of name@domain.com",
+      },
+      phone: {
+        required: "Phone number is required",
+      },
+    }
+  });
+  })
+
+  $(".newsletter__subscribe").validate({
+    messages: {
+      email: {
+        required: "We need your email address to contact you",
+        email: "Your email address must be in the format of name@domain.com",
+      }
+    }
+  });
 });
