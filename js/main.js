@@ -96,4 +96,6 @@ $(".modal__overlay--visible").keydown(closeModalEsc);
       }
     }
   });
+
+  AOS.init();
 });
