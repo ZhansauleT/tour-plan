@@ -57,6 +57,7 @@
       width: 100%
   .booking
     width: 340px
+    padding-bottom: 17px
   .map
     width: 340px
   .reviews
@@ -100,6 +101,14 @@
       &-form
         grid-column: span 4
         grid-row: 4
+@media (max-width: 880px)
+  .modal
+    &__dialog
+      padding: 30px 60px
+    // &__info
+    //   margin-top: 4px
+    // // &__button
+    // //   order: 3
 @media (max-width: 768px)
   .container
     max-width: 576px
@@ -266,6 +275,15 @@
     &__bottom
       &-list
         margin-right: 150px
+  .modal
+    &__title
+      font-size: 15px
+      line-height: 20px
+    &__info
+      flex-basis: 90%
+      margin-top: 4px
+    &__button
+      order: 3
 @media (max-width: 700px)
   .footer
     &-wrapper
@@ -278,6 +296,11 @@
       grid-column: span 1
     &__additional
       grid-column: span 2
+  .modal
+    &__dialog
+      padding: 25px 50px
+    &__input
+      flex-basis: 110%
 @media (max-width: 620px)
   .reviews
     &__title
@@ -339,6 +362,9 @@
       margin-bottom: 15px
     &__button
       order: 3
+  .modal
+    &__dialog
+      padding: 22px 40px
 @media (max-width: 561px)
   // .footer
   //   &__input

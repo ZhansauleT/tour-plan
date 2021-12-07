@@ -50,7 +50,6 @@ img {
 
 .error {
   color: #ec1f46;
-  border-bottom: 1px solid #ec1f46;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -1550,6 +1549,7 @@ template {
   }
   .booking {
     width: 340px;
+    padding-bottom: 17px;
   }
   .map {
     width: 340px;
@@ -1613,6 +1613,12 @@ template {
     grid-column: span 4;
     -ms-grid-row: 4;
     grid-row: 4;
+  }
+}
+
+@media (max-width: 880px) {
+  .modal__dialog {
+    padding: 30px 60px;
   }
 }
 
@@ -1858,6 +1864,20 @@ template {
   .footer__bottom-list {
     margin-right: 150px;
   }
+  .modal__title {
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .modal__info {
+    -ms-flex-preferred-size: 90%;
+        flex-basis: 90%;
+    margin-top: 4px;
+  }
+  .modal__button {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
 }
 
 @media (max-width: 700px) {
@@ -1877,6 +1897,13 @@ template {
   }
   .footer__additional {
     grid-column: span 2;
+  }
+  .modal__dialog {
+    padding: 25px 50px;
+  }
+  .modal__input {
+    -ms-flex-preferred-size: 110%;
+        flex-basis: 110%;
   }
 }
 
@@ -1975,6 +2002,9 @@ template {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
+  }
+  .modal__dialog {
+    padding: 22px 40px;
   }
 }
 
