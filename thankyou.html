@@ -18,17 +18,17 @@
   <header class="navbar navbar--mobile_fixed">
     <div class="container">
       <div class="navbar-top">
-        <a href="#" class="logo">
+        <a href="index.html" class="logo">
           <img src="img/horizontal-logo.svg" alt="Logo: Best Tour Plan" class="logo__image">
         </a>
-        <form action="#" class="search navbar__search navbar__search--mobile_hidden">
+        <form action="#" class="search navbar__search navbar__search--mobile--hidden">
           <input type="text" class="search__input" placeholder="Search Location" />
           <button class="search__button">
             <img src="img/search.svg" alt="Icon: Search">
           </button>
         </form>
 
-        <a href="#" class="user navbar__user navbar__user--mobile_hidden">
+        <a href="#" class="user navbar__user navbar__user--mobile--hidden">
           <img src="img/user-avatar.jpeg" alt="avatar: Nathan" class="user__avatar" />
           <span class="user__name">Nathan</span>
         </a>
@@ -45,15 +45,15 @@
     <div class="navbar-bottom">
       <div class="container">
         <ul class="navbar-menu">
-          <li class="navbar-menu__item navbar-menu__item--mobile_visible">
-            <a href="#" class="user navbar__user navbar__user--mobile_visible">
+          <li class="navbar-menu__item navbar-menu__item--mobile--visible">
+            <a href="#" class="user navbar__user navbar__user--mobile--visible">
               <img src="img/user-avatar.jpeg" alt="avatar: Nathan" class="user__avatar" />
               <span class="user__name user__name--light">Nathan</span>
             </a>
             <!-- /.user -->
           </li>
-          <li class="navbar-menu__item navbar-menu__item--mobile_visible">
-            <form action="#" class="search navbar__search navbar__search--mobile_visible">
+          <li class="navbar-menu__item navbar-menu__item--mobil--visible">
+            <form action="#" class="search navbar__search navbar__search--mobile--visible">
               <input type="text" class="search__input" placeholder="Search Location" />
               <button class="search__button">
                 <img src="img/search.svg" alt="Icon: Search">
@@ -122,7 +122,9 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-wrapper">
-        <img src="img/footer-logo.svg" alt="Logo: Best tour Plan" class="logo footer__logo">
+        <a href="#" class="logo footer__logo">
+          <img src="img/footer-logo.svg" alt="Logo: Best tour Plan">
+        </a>
         <div class="footer__list footer__categories">
           <h3 class="footer__title">ALL CATEGORIES</h3>
           <ul class="footer__ul">
@@ -153,8 +155,8 @@
           </ul>
         </div>
         <!-- /.footer__list -->
-
-
+  
+  
         <div class="footer__list footer__additional">
           <h3 class="footer__title">ADDITIONAL INFORMATION</h3>
           <ul class="footer__ul">
@@ -179,7 +181,7 @@
           </ul>
         </div>
         <!-- /.footer__list -->
-
+  
         <div class="footer__social-network">
           <h3 class="footer__title footer__title--inline">Social Network</h3>
           <div class="footer__social-links">
@@ -200,11 +202,11 @@
           </ul>
         </div>
         <!-- /.footer__list -->
-
+  
         <div class="footer__contact-details">
           <h3 class="footer__title footer__title--mb-3">Contact Details</h3>
           <p class="footer__text">Feel free to contact us by phone, email or by our contact form</p>
-
+  
           <ul class="footer__ul">
             <li class="footer__item footer__item--mb-20">
               <div class="footer__icon-wrapper"><img class="footer__icon" src="img/map-marker.svg" alt="Icon: map">
@@ -227,13 +229,18 @@
           </ul>
         </div>
         <!-- /.footer__contact-details -->
-
+  
         <div class="footer__contact-form">
           <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
-          <form action="send.php" method="POST" class="footer__form">
-            <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name">
-            <input type="text" class="input footer__input" placeholder="Phone Number*" name="phone">
-            <textarea class="footer__message" placeholder="Message" name="message"></textarea>
+          <form action="send.php" method="POST" class="footer__form form">
+            <div class="footer__input-group">
+              <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name" required />
+            </div>
+            <div class="footer__input-group">
+              <input type="tel" class="input footer__input" placeholder="Phone Number*" name="phone"
+                data-mask="+7(999) 999-99-99" required />
+            </div>
+            <textarea class="message footer__message" placeholder="Message" name="message"></textarea>
             <button class="button footer__button">Send</button>
             <span class="footer__info">* Required Fields</span>
           </form>
@@ -241,6 +248,15 @@
         </div>
       </div>
       <!-- /.footer-wrapper -->
+      <div class="footer__bottom">
+        <ul class="footer__bottom-list">
+          <li class="footer__bottom-item"><a href="#" class="footer__bottom-link">Disclaimer</a></li>
+          <li class="footer__bottom-item"><a href="#" class="footer__bottom-link">Conditions of use</a></li>
+          <li class="footer__bottom-item"><a href="#" class="footer__bottom-link">Cancellation policy</a></li>
+        </ul>
+        <img src="img/footer-bottom-logos.svg" alt="Icon: payment logos" class="footer__bottom-logo">
+      </div>
+      <!-- /.footer__bottom -->
     </div>
     <!-- /.container -->
   </footer>

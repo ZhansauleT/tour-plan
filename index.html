@@ -5,13 +5,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
   <title>Best Tour Plan - Hotel Booking</title>
+  <link rel="apple-touch-icon" sizes="76x76" href="favicon_package_v0.16/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_package_v0.16/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_package_v0.16/favicon-16x16.png">
+  <link rel="manifest" href="favicon_package_v0.16/site.webmanifest">
+  <link rel="mask-icon" href="favicon_package_v0.16/safari-pinned-tab.svg" color="#0a223d">
+  <meta name="msapplication-TileColor" content="#0a223d">
+  <meta name="theme-color" content="#ffffff">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Nunito:wght@400;700;800&display=swap"
     rel="stylesheet">
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/aos.css">
-    <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header class="navbar navbar--mobile--fixed">
@@ -320,7 +327,9 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-wrapper">
-        <img src="img/footer-logo.svg" alt="Logo: Best tour Plan" class="logo footer__logo">
+        <a href="#" class="logo footer__logo">
+          <img src="img/footer-logo.svg" alt="Logo: Best tour Plan">
+        </a>
         <div class="footer__list footer__categories">
           <h3 class="footer__title">ALL CATEGORIES</h3>
           <ul class="footer__ul">
@@ -413,14 +422,17 @@
                 <div class="footer__icon-wrapper">
                   <img class="footer__icon" src="img/phone-call-footer.svg" alt="Icon: phone call">
                 </div>
-                Tel (business hours) : 269 1500 <br />
-                Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00 pm) <br />
-                Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)
+                <div class="footer__item-numbers">
+                  <span>Tel (business hours) : <a href="tel:2691500" class="footer__link">269 1500</a></span> <br />
+                  <span>Tel (hotline) Monday - Saturday: <a href="tel:52566138" class="footer__link">52-56-61-38</a> (08:00 am – 20:00
+                    pm)</span> <br />
+                  <span>Tel (hotline) Sunday: <a href="tel:52566138" class="footer__link">52-56-61-38</a> (08:00 am – 14:00 pm)</span>
+                </div>
               </li>
               <li class="footer__item footer__item--mb-20">
                 <div class="footer__icon-wrapper">
                   <img class="footer__icon" src="img/email.svg" alt="Icon: email">
-                </div>cherly.lawson@example.com
+                </div><a href="mailto:cherly.lawson@example.com" class="footer__link">cherly.lawson@example.com</a>
               </li>
             </ul>
           </div>
