@@ -48,6 +48,12 @@ $(".modal__overlay--visible").keydown(closeModalEsc);
     var modalDialog = $(".modal__dialog");
     modalOverlay.addClass('modal__overlay--visible');
     modalDialog.addClass('modal__dialog--visible');
+
+    if ($(modalDialog).width() > ($(window).height()*0.8)) {
+      $(modalDialog).height($(window).height()*0.8);
+      $(modalDialog).style.height = "100vh";
+      $(modalDialog).style.overflow = "auto";
+    } 
   }
 
   function closeModal(event){
@@ -78,7 +84,7 @@ $(".modal__overlay--visible").keydown(closeModalEsc);
         minlength: "Your name must contain more than 2 characters",
       },
       email: {
-        required: "We need your email address to contact you",
+        required: "We need your email",
         email: "Your email address must be in the format of name@domain.com",
       },
       phone: {
@@ -88,14 +94,6 @@ $(".modal__overlay--visible").keydown(closeModalEsc);
   });
   })
 
-  $(".newsletter__subscribe").validate({
-    messages: {
-      email: {
-        required: "We need your email address to contact you",
-        email: "Your email address must be in the format of name@domain.com",
-      }
-    }
-  });
-
   AOS.init();
+                                        
 });
