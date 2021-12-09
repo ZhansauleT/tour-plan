@@ -115,11 +115,11 @@
         <div class="hotel-info__text">
           <div class="hotel-wrapper">
             <div class="stars">
+              <img src="img/stars.svg" alt="star">
+              <!-- <img src="img/star.svg" alt="star">
               <img src="img/star.svg" alt="star">
               <img src="img/star.svg" alt="star">
-              <img src="img/star.svg" alt="star">
-              <img src="img/star.svg" alt="star">
-              <img src="img/star.svg" alt="star">
+              <img src="img/star.svg" alt="star"> -->
             </div>
             <h1 class="hotel-name hotel-info__name">Grand Hilton Hotel</h1>
             <span class="offer hotel-info__offer">Flash Offer</span>
@@ -210,10 +210,10 @@
         <span class="newsletter-title__strong">Newsletter</span>
       </h2>
       <form action="send.php" method="POST" class="subscribe newsletter__subscribe form">
-        <div class="subscribe__input-group">
+        <!-- <div class="subscribe__input-group"> -->
           <input type="text" class="subscribe__input" placeholder="Your email address" name="email" autocomplete="off" required />
-        </div>
-        <button class="subscribe__button">Send</button>
+          <button class="subscribe__button">Send</button>
+        <!-- </div> -->
       </form>
     </div>
     <!-- /.newsletter-wrapper -->
@@ -240,7 +240,7 @@
               </div>
               <!-- /.reviews-slider__profile -->
               <p class="reviews-slider__text">
-                It was very nice hotel with cleanliness. Staff behavior was good and polite. They welcome us very well. Issue was only
+                It  was very nice hotel with cleanliness.  Staff behavior was good and polite. They welcome us very well. Issue was only
                 that Lift was not in working and we were allotted to 3rd floor and amenities articles were in corner of gallery which
                 were giving bad feeling. Breakfast was good and support of the staff was also very nice. Location is not good as per
                 atmosphere, it is very nearby most of the popular places but self location in a narrow street is not good. Overall it
@@ -293,28 +293,28 @@
         <div class="card activities__card" data-aos="fade-up">
           <img src="img/activity-1.jpeg" alt="The curious corner of chamarel" class="card__image">
           <h3 class="card__title">The curious corner
-          of chamarel</h3>
+          <span class="card__title-span">of chamarel</span></h3>
           <button data-toggle="modal" class="card__button">Book Now</button>
         </div>
         <!-- /.card -->
         <div class="card activities__card" data-aos="fade-up">
           <img src="img/activity-2.jpeg" alt="Gymkhana club golf course" class="card__image">
           <h3 class="card__title">Gymkhana club golf
-          course</h3>
+          <span class="card__title-span">course</span></h3>
           <button data-toggle="modal" class="card__button">Book Now</button>
         </div>
         <!-- /.card -->
         <div class="card activities__card" data-aos="fade-up">
           <img src="img/activity-3.jpeg" alt="Tamarind falls hiking trip - full day" class="card__image">
           <h3 class="card__title">Tamarind falls hiking
-          trip - full day</h3>
+          <span class="card__title-span">trip - full day</span></h3>
           <button data-toggle="modal" class="card__button">Book Now</button>
         </div>
         <!-- /.card -->
         <div class="card activities__card" data-aos="fade-up">
           <img src="img/activity-4.jpeg" alt="The blue marine discovery quest" class="card__image">
           <h3 class="card__title">The blue marine discovery
-          quest</h3>
+          <span class="card__title-span">quest</span></h3>
           <button data-toggle="modal" class="card__button">Book Now</button>
         </div>
         <!-- /.card -->
@@ -410,7 +410,7 @@
           <!-- /.footer__list -->
 
           <div class="footer__contact-details">
-            <h3 class="footer__title footer__title--mb-3">Contact Details</h3>
+            <h3 class="footer__title footer__title--mb-25">Contact Details</h3>
             <p class="footer__text">Feel free to contact us by phone, email or by our contact form</p>
 
             <ul class="footer__ul">
@@ -479,24 +479,24 @@
 
   <div class="modal">
     <div class="modal__overlay">
-
+      <div class="modal__dialog">
+        <a href="#" class="modal__close">
+          <img src="img/close.svg" alt="Icon: close">
+        </a>
+        <h3 class="modal__title modal__title--mb--3">Send us a message</h3>
+        <form action="send.php" method="POST" class="modal__form form">
+          <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name" required>
+          <input type="tel" class="input modal__input" placeholder="Phone Number*" name="phone" data-mask="+7(999) 999-99-99"
+            required>
+          <input type="email" class="input modal__input" placeholder="Your Email*" name="email" required>
+          <textarea class="message modal__message" placeholder="Message" name="message"></textarea>
+          <button class="button modal__button">Send</button>
+          <span class="modal__info">* Required Fields</span>
+        </form>
+      </div>
+      <!-- /.modal__dialog -->
     </div>
     <!-- /.modal__overlay -->
-    <div class="modal__dialog">
-      <a href="#" class="modal__close">
-        <img src="img/close.svg" alt="Icon: close">
-      </a>
-      <h3 class="modal__title modal__title--mb--3">Send us a message</h3>
-      <form action="send.php" method="POST" class="modal__form form">
-        <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name" required>
-        <input type="tel" class="input modal__input" placeholder="Phone Number*" name="phone" data-mask="+7(999) 999-99-99" required>
-        <input type="email" class="input modal__input" placeholder="Your Email*" name="email" required>
-        <textarea class="message modal__message" placeholder="Message" name="message"></textarea>
-        <button class="button modal__button">Send</button>
-        <span class="modal__info">* Required Fields</span>
-      </form>
-    </div>
-    <!-- /.modal__dialog -->
   </div>
   <!-- /.modal -->
 

@@ -32,6 +32,10 @@ var reviewsSlider = new Swiper('.reviews-slider', {
 var menuButton = $(".menu-button");
 menuButton.on('click', function(){
   $(".navbar-bottom").toggleClass('navbar-bottom--visible');
+  if ($(".navbar-bottom--visible").width() > ($(window).height()*0.8)) {
+      $(".navbar-bottom--visible").height($(window).height()*0.8);
+      $(".navbar-bottom--visible").style.height = "100vh";
+    } 
 });
 
 var modalButton = $('[data-toggle=modal]');
@@ -52,7 +56,7 @@ $(".modal__overlay--visible").keydown(closeModalEsc);
     if ($(modalDialog).width() > ($(window).height()*0.8)) {
       $(modalDialog).height($(window).height()*0.8);
       $(modalDialog).style.height = "100vh";
-      $(modalDialog).style.overflow = "auto";
+      //$(modalDialog).style.overflow = "auto";
     } 
   }
 
@@ -84,7 +88,7 @@ $(".modal__overlay--visible").keydown(closeModalEsc);
         minlength: "Your name must contain more than 2 characters",
       },
       email: {
-        required: "We need your email",
+        required: "We need your email to contact you",
         email: "Your email address must be in the format of name@domain.com",
       },
       phone: {
