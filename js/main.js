@@ -32,7 +32,7 @@ var reviewsSlider = new Swiper('.reviews-slider', {
 var menuButton = $(".menu-button");
 menuButton.on('click', function(){
   $(".navbar-bottom").toggleClass('navbar-bottom--visible');
-  if ($(".navbar-bottom--visible").width() > ($(window).height()*0.8)) {
+  if ($(".navbar-bottom--visible").height() > ($(window).height()*0.8)) {
       $(".navbar-bottom--visible").height($(window).height()*0.8);
       $(".navbar-bottom--visible").style.height = "100vh";
     } 
@@ -53,7 +53,7 @@ $(".modal__overlay--visible").keydown(closeModalEsc);
     modalOverlay.addClass('modal__overlay--visible');
     modalDialog.addClass('modal__dialog--visible');
 
-    if ($(modalDialog).width() > ($(window).height()*0.8)) {
+    if ($(modalDialog).height() > ($(window).height()*0.8)) {
       $(modalDialog).height($(window).height()*0.8);
       $(modalDialog).style.height = "100vh";
       //$(modalDialog).style.overflow = "auto";
