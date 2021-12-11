@@ -266,6 +266,7 @@
         &--hidden
           display: none
         &--visible
+          margin-left: 0
           display: flex
     &__user
       flex-direction: column
@@ -556,15 +557,19 @@
           &--visible
             width: 245px
             margin-left: 18px
-            margin-right: 10px
-            margin-bottom: 7px
+            margin-right: 13px
+            margin-bottom: 5px
+      &-bottom
+        position: static
       &-menu
         padding-top: 0
         &__item
           margin-bottom: 15px
+          &:nth-child(n+6)
+            margin-bottom: 18px
           &--mobile
             &--visible
-              margin-left: 15px
+              margin-left: 0px
               margin-bottom: 30px
     .search
       &__input
