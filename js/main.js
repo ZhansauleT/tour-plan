@@ -109,6 +109,7 @@ $(".modal__overlay--visible").keydown(closeModalEsc);
       },
       phone: {
         required: "Phone number is required in format: +7(777)777-77-77",
+        minlength: "Please, enter a valid phone number",
       },
     }
   });

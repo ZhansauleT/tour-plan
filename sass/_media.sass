@@ -72,8 +72,24 @@
       width: 80%
       padding: 30px 60px
 @media (min-width: 992px)
-  button:hover
-    background-color: $hover-button-color
+  .search
+    &__button:hover
+      background-color: $hover-button-color
+  .booking
+    &__button:hover
+      background-color: $hover-button-color
+  .subscribe
+    &__button:hover
+      background-color: $hover-button-color
+  .card
+    &__button:hover
+      background-color: $hover-button-color
+  .footer
+    &__button:hover
+      background-color: $hover-button-color
+  .modal
+    &__button:hover
+      background-color: $hover-button-color
   input:hover, textarea:hover
     background-color: $hover-input-color
   .navbar
@@ -95,6 +111,9 @@
     &__link
       &:hover
         color: $primary
+      &--hover
+        &:hover
+          transform: rotateY(360deg)
     &__bottom
       &-link
         &:hover
@@ -208,6 +227,9 @@
       width: 70%
       padding: 30px 60px
 @media (max-width: 880px)
+  input, textarea
+    font-size: 12px
+    line-height: 15px
   .navbar
     &__search
       margin-left: 47.25px
