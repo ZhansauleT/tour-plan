@@ -40,9 +40,18 @@ menuButton.on('click', function(){
 
 var modalButton = $('[data-toggle=modal]');
 var closeModalButton = $(".modal__close");
+var mainPageButton = $(".gratitude__button");
 
 modalButton.on('click', openModal);
 closeModalButton.on('click', closeModal);
+//go to the main page button
+mainPageButton.on('click', goToMainPage);
+
+//to go to the main page
+function goToMainPage(event){
+  event.preventDefault();
+  window.location.replace("index.html");
+}
 
 //to close the modal window when esc is pressed
 $(".modal__overlay--visible").keydown(closeModalEsc);
@@ -53,11 +62,12 @@ $(".modal__overlay--visible").keydown(closeModalEsc);
     modalOverlay.addClass('modal__overlay--visible');
     modalDialog.addClass('modal__dialog--visible');
 
-    if ($(modalDialog).height() > ($(window).height()*0.8)) {
-      $(modalDialog).height($(window).height()*0.8);
-      $(modalDialog).style.height = "100vh";
-      //$(modalDialog).style.overflow = "auto";
-    } 
+    // if ($(modalDialog).height() > ($(window).height()*0.8)) {
+    //   $(modalDialog).height($(window).height()*0.8);
+    //   $(modalDialog).style.height = "100vh";
+    //   $(modalDialog).style.overflow = "hidden";
+    //   console.log("I am here");
+    // } 
   }
 
   function closeModal(event){
@@ -82,6 +92,12 @@ $(".modal__overlay--visible").keydown(closeModalEsc);
   //Form validation
   $(".form").each(function() {
     $(this).validate({
+    rules: {
+      name: {
+        required: true,
+        minlength: 2,
+      },
+    },
     messages: {
       name: {
         required: "Please specify your name",
@@ -92,7 +108,7 @@ $(".modal__overlay--visible").keydown(closeModalEsc);
         email: "Your email address must be in the format of name@domain.com",
       },
       phone: {
-        required: "Phone number is required",
+        required: "Phone number is required in format: +7(777)777-77-77",
       },
     }
   });

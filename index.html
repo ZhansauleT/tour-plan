@@ -286,28 +286,28 @@
     <div class="container">
       <h2 class="activities__title">Other Activities</h2>
       <div class="activities-wrapper">
-        <div class="card activities__card" data-aos="fade-up">
+        <div class="card activities__card activities__card--order-0" data-aos="fade-up">
           <img src="img/activity-1.jpeg" alt="The curious corner of chamarel" class="card__image">
           <h3 class="card__title">The curious corner
           <span class="card__title-span">of chamarel</span></h3>
           <button data-toggle="modal" class="card__button">Book Now</button>
         </div>
         <!-- /.card -->
-        <div class="card activities__card" data-aos="fade-up">
+        <div class="card activities__card activities__card--order-2" data-aos="fade-up">
           <img src="img/activity-2.jpeg" alt="Gymkhana club golf course" class="card__image">
           <h3 class="card__title">Gymkhana club golf
           <span class="card__title-span">course</span></h3>
           <button data-toggle="modal" class="card__button">Book Now</button>
         </div>
         <!-- /.card -->
-        <div class="card activities__card" data-aos="fade-up">
+        <div class="card activities__card activities__card--order-1" data-aos="fade-up">
           <img src="img/activity-3.jpeg" alt="Tamarind falls hiking trip - full day" class="card__image">
           <h3 class="card__title">Tamarind falls hiking
           <span class="card__title-span">trip - full day</span></h3>
           <button data-toggle="modal" class="card__button">Book Now</button>
         </div>
         <!-- /.card -->
-        <div class="card activities__card" data-aos="fade-up">
+        <div class="card activities__card activities__card--order-3" data-aos="fade-up">
           <img src="img/activity-4.jpeg" alt="The blue marine discovery quest" class="card__image">
           <h3 class="card__title">The blue marine discovery
           <span class="card__title-span">quest</span></h3>
@@ -328,7 +328,7 @@
           <img src="img/footer-logo.svg" alt="Logo: Best tour Plan">
         </a>
         <div class="footer__list footer__categories">
-          <h3 class="footer__title">ALL CATEGORIES</h3>
+          <h3 class="footer__title footer__title--mb-18">ALL CATEGORIES</h3>
           <ul class="footer__ul">
             <li class="footer__item">
               <a href="#" class="footer__link">All Deals</a>
@@ -360,7 +360,7 @@
         
         
         <div class="footer__list footer__additional">
-          <h3 class="footer__title">ADDITIONAL INFORMATION</h3>
+          <h3 class="footer__title footer__title--mb-18">ADDITIONAL INFORMATION</h3>
           <ul class="footer__ul">
             <li class="footer__item">
               <a href="#" class="footer__link">About Us</a>
@@ -395,7 +395,7 @@
           </div>
           <!-- /.footer__social-network -->
           <div class="footer__list footer__legal">
-            <h3 class="footer__title">LEGAL INFORMATION</h3>
+            <h3 class="footer__title footer__title--mb-15">LEGAL INFORMATION</h3>
             <ul class="footer__ul">
               <li class="footer__item"><a href="#" class="footer__link">Terms & Conditions</a></li>
               <li class="footer__item"><a href="#" class="footer__link">Disclaimer</a></li>
@@ -411,13 +411,13 @@
 
             <ul class="footer__ul">
               <li class="footer__item footer__item--mb-20">
-                <div class="footer__icon-wrapper"><img class="footer__icon" src="img/map-marker.svg" alt="Icon: map">
+                <div class="footer__icon-wrapper"><img class="footer__icon footer__icon--pt-5" src="img/map-marker.svg" alt="Icon: map">
                 </div>
                 9748 Blossom Hill Rd undefined Lansing, Idaho 68545 United States
               </li>
               <li class="footer__item footer__item--mb-20">
                 <div class="footer__icon-wrapper">
-                  <img class="footer__icon" src="img/phone-call-footer.svg" alt="Icon: phone call">
+                  <img class="footer__icon footer__icon--pl-5" src="img/phone-call-footer.svg" alt="Icon: phone call">
                 </div>
                 <div class="footer__item-numbers">
                   <span>Tel (business hours) : <a href="tel:2691500" class="footer__link">269 1500</a></span> <br />
@@ -428,7 +428,7 @@
               </li>
               <li class="footer__item footer__item--mb-20">
                 <div class="footer__icon-wrapper">
-                  <img class="footer__icon" src="img/email.svg" alt="Icon: email">
+                  <img class="footer__icon footer__icon--pl-5" src="img/email.svg" alt="Icon: email">
                 </div><a href="mailto:cherly.lawson@example.com" class="footer__link">cherly.lawson@example.com</a>
               </li>
             </ul>
@@ -448,7 +448,7 @@
               <div class="footer__input-group">
                 <input 
                   type="tel" 
-                  class="input footer__input" placeholder="Phone Number*" name="phone" data-mask="+7(999) 999-99-99" 
+                  class="input footer__input" placeholder="Phone Number*" name="phone" data-mask="+7(999) 999-99-99" data-mask-clearifnotmatch="true" 
                   required
                   />
               </div>
@@ -482,8 +482,8 @@
         <h3 class="modal__title modal__title--mb--3">Send us a message</h3>
         <form action="send.php" method="POST" class="modal__form form">
           <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name" required>
-          <input type="tel" class="input modal__input" placeholder="Phone Number*" name="phone" data-mask="+7(999) 999-99-99"
-            required>
+          <input type="tel" class="input modal__input" placeholder="Phone Number*" name="phone" data-mask="+7(999) 999-99-99" data-mask-clearifnotmatch="true"
+          required>
           <input type="email" class="input modal__input" placeholder="Your Email*" name="email" required>
           <textarea class="message modal__message" placeholder="Message" name="message"></textarea>
           <button class="button modal__button">Send</button>

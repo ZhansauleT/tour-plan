@@ -12,16 +12,24 @@ $email = $_POST['email'];
 
 // Формирование самого письма
 $title = "Новое обращение Best Tour Plan";
-if(isset($_POST['email'])){
+if(isset($_POST['email']) && !isset($_POST['name'], $_POST['phone'])){ //for subscribe
     $body = "
         <h2>Новое обращение</h2>
         <b>Почта:</b><br>$email
         ";
-}else{
+}elseif(isset($_POST['email'], $_POST['name'], $_POST['message'], $_POST['phone'])){ //for modal window
     $body = "
         <h2>Новое обращение</h2>
         <b>Имя:</b> $name<br>
-        <b>Телефон:</b> $phone<br><br>
+        <b>Телефон:</b> $phone<br>
+        <b>Почта:</b>$email<br><br>
+        <b>Сообщение:</b><br>$message
+        ";
+}elseif(isset($_POST['phone'], $_POST['name'], $_POST['message'])){ // for footer form
+        $body = "
+        <h2>Новое обращение</h2>
+        <b>Имя:</b> $name<br>
+        <b>Телефон:</b> $phone<br>
         <b>Сообщение:</b><br>$message
         ";
 }

@@ -10,15 +10,18 @@
     visibility: hidden
     opacity: 0
     transition: opacity 0.2s
+    overflow-y: auto
     &--visible
       visibility: visible
       opacity: 1
   &__dialog
-    position: fixed
-    top: 50%
-    left: 50%
+    position: relative
+    // position: absolute
+    // top: 50%
+    // left: 50%
+    //margin: 191px 481px
     max-width: 478px
-    transform: translate(-50%, -50%)
+    transform: translate(101%, 39%)
     padding: 33px 88px
     background-color: $dark
     color: $light
@@ -30,7 +33,6 @@
     &--visible
       visibility: visible
       opacity: 1
-      overflow-y: auto
   &__close
     position: absolute
     right: 18px
@@ -42,10 +44,13 @@
     font-weight: bold
     font-size: 18px
     line-height: 23px
-    margin-bottom: 15px
+    margin-top: 0
+    //margin-bottom: 15px
+    margin-bottom: 0
     text-transform: uppercase
     text-align: center
   &__input
+    position: relative
     width: 100%
     margin-top: 15px
   &__message
@@ -59,6 +64,7 @@
     font-weight: bold
     font-size: 12px
     line-height: 15px
+    margin-top: 15px
     color: #E0E0E0
   &__form
     display: flex
