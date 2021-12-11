@@ -105,7 +105,7 @@ $(".modal__overlay--visible").keydown(closeModalEsc);
       },
       email: {
         required: "We need your email to contact you",
-        email: "Your email address must be in the format of name@domain.com",
+        email: "The format: name@domain.com",
       },
       phone: {
         required: "Phone number is required in format: +7(777)777-77-77",

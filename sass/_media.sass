@@ -73,7 +73,32 @@
       padding: 30px 60px
 @media (min-width: 992px)
   button:hover
-    background-color: $hover-color
+    background-color: $hover-button-color
+  input:hover, textarea:hover
+    background-color: $hover-input-color
+  .navbar
+    &-menu
+      &__item
+        &:hover
+          color: $primary
+  .breadcrumb
+    &-list
+      &__item
+        &:hover
+          color: $primary
+  .user
+    &__name
+      &:hover
+        color: $primary
+        text-decoration: underline
+  .footer
+    &__link
+      &:hover
+        color: $primary
+    &__bottom
+      &-link
+        &:hover
+          color: $primary
 @media (max-width: 992px)
   .container,
   .newsletter-wrapper
